@@ -218,16 +218,6 @@
 <circle x="2.54" y="45.72" radius="1.27" width="0.127" layer="21"/>
 <circle x="15.24" y="2.54" radius="1.27" width="0.127" layer="21"/>
 </package>
-<package name="CON-MOTOR">
-<pad name="B2" x="2.54" y="0" drill="1.62" diameter="2.1336" shape="square"/>
-<pad name="B1" x="2.54" y="2.54" drill="1.62" diameter="2.1336" shape="square"/>
-<pad name="A2" x="2.54" y="5.08" drill="1.62" diameter="2.1336" shape="square"/>
-<pad name="A1" x="2.54" y="7.62" drill="1.62" diameter="2.1336" shape="square"/>
-<wire x1="1.27" y1="8.89" x2="3.81" y2="8.89" width="0.127" layer="51"/>
-<wire x1="3.81" y1="8.89" x2="3.81" y2="-1.27" width="0.127" layer="51"/>
-<wire x1="3.81" y1="-1.27" x2="1.27" y2="-1.27" width="0.127" layer="51"/>
-<wire x1="1.27" y1="-1.27" x2="1.27" y2="8.89" width="0.127" layer="51"/>
-</package>
 <package name="CON-USB-READER-V18">
 <wire x1="0" y1="0" x2="0" y2="30.48" width="0.127" layer="21"/>
 <wire x1="0" y1="30.48" x2="39.37" y2="30.48" width="0.127" layer="21"/>
@@ -241,6 +231,16 @@
 <pad name="TX" x="38.1" y="19.05" drill="1.62" diameter="2.1336" shape="square"/>
 <pad name="GND1" x="38.1" y="21.59" drill="1.62" diameter="2.1336" shape="square"/>
 <pad name="VCC" x="38.1" y="24.13" drill="1.62" diameter="2.1336" shape="square"/>
+</package>
+<package name="CON-MOTOR">
+<pad name="B2" x="2.54" y="0" drill="1.62" diameter="2.1336" shape="square"/>
+<pad name="B1" x="2.54" y="2.54" drill="1.62" diameter="2.1336" shape="square"/>
+<pad name="A2" x="2.54" y="5.08" drill="1.62" diameter="2.1336" shape="square"/>
+<pad name="A1" x="2.54" y="7.62" drill="1.62" diameter="2.1336" shape="square"/>
+<wire x1="1.27" y1="8.89" x2="3.81" y2="8.89" width="0.127" layer="51"/>
+<wire x1="3.81" y1="8.89" x2="3.81" y2="-1.27" width="0.127" layer="51"/>
+<wire x1="3.81" y1="-1.27" x2="1.27" y2="-1.27" width="0.127" layer="51"/>
+<wire x1="1.27" y1="-1.27" x2="1.27" y2="8.89" width="0.127" layer="51"/>
 </package>
 </packages>
 <symbols>
@@ -309,16 +309,6 @@
 <pin name="PF1" x="20.32" y="-22.86" visible="pin" length="middle" rot="R180"/>
 <pin name="PE2" x="-5.08" y="-68.58" visible="pin" length="middle"/>
 </symbol>
-<symbol name="CON-MOTOR">
-<wire x1="0" y1="2.54" x2="0" y2="22.86" width="0.254" layer="94"/>
-<wire x1="0" y1="22.86" x2="7.62" y2="22.86" width="0.254" layer="94"/>
-<wire x1="7.62" y1="22.86" x2="7.62" y2="2.54" width="0.254" layer="94"/>
-<wire x1="7.62" y1="2.54" x2="0" y2="2.54" width="0.254" layer="94"/>
-<pin name="A1" x="-5.08" y="20.32" visible="pin" length="middle"/>
-<pin name="A2" x="-5.08" y="15.24" visible="pin" length="middle"/>
-<pin name="B1" x="-5.08" y="10.16" visible="pin" length="middle"/>
-<pin name="B2" x="-5.08" y="5.08" visible="pin" length="middle"/>
-</symbol>
 <symbol name="CON-USB-READER-V18">
 <pin name="GND2" x="0" y="2.54" visible="pin" length="middle"/>
 <pin name="CP" x="0" y="7.62" visible="pin" length="middle"/>
@@ -332,6 +322,16 @@
 <wire x1="5.08" y1="0" x2="15.24" y2="0" width="0.254" layer="94"/>
 <wire x1="15.24" y1="0" x2="15.24" y2="40.64" width="0.254" layer="94"/>
 <wire x1="15.24" y1="40.64" x2="5.08" y2="40.64" width="0.254" layer="94"/>
+</symbol>
+<symbol name="CON-MOTOR">
+<wire x1="0" y1="2.54" x2="0" y2="22.86" width="0.254" layer="94"/>
+<wire x1="0" y1="22.86" x2="7.62" y2="22.86" width="0.254" layer="94"/>
+<wire x1="7.62" y1="22.86" x2="7.62" y2="2.54" width="0.254" layer="94"/>
+<wire x1="7.62" y1="2.54" x2="0" y2="2.54" width="0.254" layer="94"/>
+<pin name="A1" x="-5.08" y="20.32" visible="pin" length="middle"/>
+<pin name="A2" x="-5.08" y="15.24" visible="pin" length="middle"/>
+<pin name="B1" x="-5.08" y="10.16" visible="pin" length="middle"/>
+<pin name="B2" x="-5.08" y="5.08" visible="pin" length="middle"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -414,24 +414,6 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="CON-MOTOR">
-<gates>
-<gate name="G$1" symbol="CON-MOTOR" x="0" y="-2.54"/>
-</gates>
-<devices>
-<device name="" package="CON-MOTOR">
-<connects>
-<connect gate="G$1" pin="A1" pad="A1"/>
-<connect gate="G$1" pin="A2" pad="A2"/>
-<connect gate="G$1" pin="B1" pad="B1"/>
-<connect gate="G$1" pin="B2" pad="B2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="CON-USB-READER-V18">
 <gates>
 <gate name="G$1" symbol="CON-USB-READER-V18" x="0" y="0"/>
@@ -447,6 +429,24 @@
 <connect gate="G$1" pin="TX" pad="TX"/>
 <connect gate="G$1" pin="TXR" pad="TXR"/>
 <connect gate="G$1" pin="VCC" pad="VCC"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="CON-MOTOR">
+<gates>
+<gate name="G$1" symbol="CON-MOTOR" x="0" y="-2.54"/>
+</gates>
+<devices>
+<device name="" package="CON-MOTOR">
+<connects>
+<connect gate="G$1" pin="A1" pad="A1"/>
+<connect gate="G$1" pin="A2" pad="A2"/>
+<connect gate="G$1" pin="B1" pad="B1"/>
+<connect gate="G$1" pin="B2" pad="B2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -672,9 +672,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="U$1" library="weller-eagle" deviceset="A4998" device=""/>
 <part name="U$2" library="weller-eagle" deviceset="ASTAR32U4MINI" device=""/>
 <part name="CN1" library="adafruit" deviceset="DCBARREL" device="SMT"/>
-<part name="U$4" library="weller-eagle" deviceset="CON-MOTOR" device=""/>
 <part name="C1" library="SparkFun-Capacitors" deviceset="100UF-63V-20%(ELECT)" device="" value="100uF"/>
 <part name="U$3" library="weller-eagle" deviceset="CON-USB-READER-V18" device=""/>
+<part name="U$4" library="weller-eagle" deviceset="CON-MOTOR" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -684,27 +684,13 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="U$1" gate="G$1" x="91.44" y="22.86"/>
 <instance part="U$2" gate="G$1" x="38.1" y="63.5"/>
 <instance part="CN1" gate="G$1" x="88.9" y="73.66" rot="R180"/>
-<instance part="U$4" gate="G$1" x="134.62" y="10.16"/>
 <instance part="C1" gate="G$1" x="68.58" y="76.2" rot="R180"/>
 <instance part="U$3" gate="G$1" x="17.78" y="33.02" rot="R180"/>
+<instance part="U$4" gate="G$1" x="132.08" y="10.16"/>
 </instances>
 <busses>
 </busses>
 <nets>
-<net name="N$3" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="1A"/>
-<pinref part="U$4" gate="G$1" pin="B1"/>
-<wire x1="129.54" y1="20.32" x2="111.76" y2="20.32" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$4" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="1B"/>
-<pinref part="U$4" gate="G$1" pin="B2"/>
-<wire x1="129.54" y1="15.24" x2="111.76" y2="15.24" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="5V" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="VDD"/>
@@ -719,25 +705,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <segment>
 <pinref part="U$3" gate="G$1" pin="VCC"/>
 <wire x1="17.78" y1="-5.08" x2="22.86" y2="-5.08" width="0.1524" layer="91"/>
+<label x="20.32" y="-5.08" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GND" class="0">
-<segment>
-<wire x1="109.22" y1="35.56" x2="114.3" y2="35.56" width="0.1524" layer="91"/>
-<label x="109.22" y="35.56" size="1.778" layer="95"/>
-</segment>
-<segment>
-<wire x1="109.22" y1="5.08" x2="114.3" y2="5.08" width="0.1524" layer="91"/>
-<label x="109.22" y="5.08" size="1.778" layer="95"/>
-</segment>
-<segment>
-<wire x1="35.56" y1="81.28" x2="27.94" y2="81.28" width="0.1524" layer="91"/>
-<label x="27.94" y="81.28" size="1.778" layer="95"/>
-</segment>
-<segment>
-<wire x1="55.88" y1="66.04" x2="60.96" y2="66.04" width="0.1524" layer="91"/>
-<label x="55.88" y="66.04" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="CN1" gate="G$1" pin="GNDBREAK"/>
 <wire x1="86.36" y1="73.66" x2="76.2" y2="73.66" width="0.1524" layer="91"/>
@@ -752,22 +723,19 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="76.2" y1="81.28" x2="76.2" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$3" gate="G$1" pin="GND1"/>
-<wire x1="17.78" y1="0" x2="22.86" y2="0" width="0.1524" layer="91"/>
+<pinref part="U$3" gate="G$1" pin="GND2"/>
+<wire x1="17.78" y1="30.48" x2="22.86" y2="30.48" width="0.1524" layer="91"/>
+<label x="17.78" y="30.48" size="1.778" layer="95"/>
 </segment>
-</net>
-<net name="N$2" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="2A"/>
-<pinref part="U$4" gate="G$1" pin="A2"/>
-<wire x1="111.76" y1="25.4" x2="129.54" y2="25.4" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="GND1"/>
+<wire x1="111.76" y1="35.56" x2="119.38" y2="35.56" width="0.1524" layer="91"/>
+<label x="114.3" y="35.56" size="1.778" layer="95"/>
 </segment>
-</net>
-<net name="N$1" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="2B"/>
-<pinref part="U$4" gate="G$1" pin="A1"/>
-<wire x1="111.76" y1="30.48" x2="129.54" y2="30.48" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="GND"/>
+<wire x1="58.42" y1="66.04" x2="68.58" y2="66.04" width="0.1524" layer="91"/>
+<label x="60.96" y="66.04" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$6" class="0">
@@ -864,6 +832,34 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="27.94" y1="10.16" x2="27.94" y2="0" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="PD2"/>
 <wire x1="27.94" y1="0" x2="33.02" y2="0" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="2B"/>
+<pinref part="U$4" gate="G$1" pin="A1"/>
+<wire x1="111.76" y1="30.48" x2="127" y2="30.48" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="2A"/>
+<pinref part="U$4" gate="G$1" pin="A2"/>
+<wire x1="111.76" y1="25.4" x2="127" y2="25.4" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="1A"/>
+<pinref part="U$4" gate="G$1" pin="B1"/>
+<wire x1="111.76" y1="20.32" x2="127" y2="20.32" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="1B"/>
+<pinref part="U$4" gate="G$1" pin="B2"/>
+<wire x1="111.76" y1="15.24" x2="127" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
